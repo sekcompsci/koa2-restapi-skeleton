@@ -1,0 +1,40 @@
+{
+  "name": "koa2-restapi-skeleton",
+  "version": "0.1.0",
+  "author": "Sirawit Moonrinta",
+  "repository": "https://github.com/sekcompsci/koa2-restapi-skeleton",
+  "license": "MIT",
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": { "node": "8.11.2" }
+        }
+      ],
+      "stage-0",
+      "minify"
+    ]
+  },
+  "scripts": {
+    "start": "nodemon app/server.js --exec babel-node",
+    "build": "babel -s true app -d dist",
+    "serve": "node dist/server.js",
+    "clean": "rm -rf dist/"
+  },
+  "dependencies": {
+    "config": "^2.0.0",
+    "koa": "^2.5.2",
+    "koa-body": "^4.0.4",
+    "koa-router": "^7.4.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-minify": "^0.4.3",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-minify": "^0.4.3",
+    "babel-preset-stage-0": "^6.24.1",
+    "nodemon": "^1.18.3"
+  }
+}
